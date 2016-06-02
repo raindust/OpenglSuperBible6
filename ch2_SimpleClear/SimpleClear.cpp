@@ -2,7 +2,7 @@
 
 class simpleclear_app : public sb7::application
 {
-	void init()
+	void init() override
 	{
 		static const char title[] = "OpenGL SuperBible - Simple Clear";
 
@@ -11,7 +11,7 @@ class simpleclear_app : public sb7::application
 		memcpy(info.title, title, sizeof(title));
 	}
 
-	virtual void render(double currentTime)
+	virtual void render(double currentTime) override
 	{
 		static const GLfloat red[] = { 1.0f, 0.0f, 0.0f, 1.0f };
 		glClearBufferfv(GL_COLOR, 0, red);

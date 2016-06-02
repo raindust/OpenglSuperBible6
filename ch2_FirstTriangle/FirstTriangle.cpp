@@ -12,7 +12,12 @@ GLuint compile_shaders(void)
 		" \n"
 		"void main(void) \n"
 		"{ \n"
-		" gl_Position = vec4(0.0, 0.0, 0.5, 1.0); \n"
+		" // Declare a hard-coded array of positions \n"
+		"		const vec4 vertices[3] = vec4[3](	vec4( 0.25, -0.25, 0.5, 1.0), \n"
+		"														vec4(-0.25, -0.25, 0.5, 1.0),  \n"
+		"														vec4( 0.25, 0.25, 0.5, 1.0));  \n"
+		" // Index into our array using gl_VertexID  \n"
+		"	gl_Position = vertices[gl_VertexID];  \n"
 		"} \n"
 	};
 	// Source code for fragment shader
@@ -46,7 +51,7 @@ GLuint compile_shaders(void)
 	return program;
 }
 
-class UsingShader_app : public sb7::application
+class FirstTriangle_app : public sb7::application
 {
 public:
 	// <snip>
@@ -67,16 +72,12 @@ public:
 	// Our rendering function
 	void render(double currentTime) override
 	{
-		const GLfloat color[] = { (float)sin(currentTime) * 0.5f + 0.5f,
-			(float)cos(currentTime) * 0.5f + 0.5f,
-			0.0f, 1.0f };
+		const GLfloat color[] = { 0.0f, 0.2f, 0.0f, 1.0f };
 		glClearBufferfv(GL_COLOR, 0, color);
 		// Use the program object we created earlier for rendering
 		glUseProgram(rendering_program);
-		//·Å´óµã
-		glPointSize(40.0f);
-		// Draw one point
-		glDrawArrays(GL_POINTS, 0, 1);
+		// Draw one triangle
+		glDrawArrays(GL_TRIANGLES, 0, 3);
 	}
 
 private:
@@ -84,4 +85,4 @@ private:
 	GLuint vertex_array_object;
 };
 
-DECLARE_MAIN(UsingShader_app)
+DECLARE_MAIN(FirstTriangle_app)

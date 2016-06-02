@@ -2,7 +2,7 @@
 
 class ColorFading_app : public sb7::application
 {
-	void init()
+	void init() override
 	{
 		static const char title[] = "OpenGL SuperBible - Color Fading";
 
@@ -11,7 +11,7 @@ class ColorFading_app : public sb7::application
 		memcpy(info.title, title, sizeof(title));
 	}
 
-	virtual void render(double currentTime)
+	virtual void render(double currentTime) override
 	{
 		const GLfloat color[] = { (float)sin(currentTime) * 0.5f + 0.5f,
 			(float)cos(currentTime) * 0.5f + 0.5f,

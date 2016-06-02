@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch2_ColorFading", "ch2_Colo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch2_UsingShader", "ch2_UsingShader\ch2_UsingShader.vcxproj", "{79E610B3-3F28-440A-8D45-6D793A5415B2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch2_FirstTriangle", "ch2_FirstTriangle\ch2_FirstTriangle.vcxproj", "{47886C3C-21C2-4C59-A9B2-83C94317BDCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -53,6 +55,14 @@ Global
 		{79E610B3-3F28-440A-8D45-6D793A5415B2}.Release|x64.Build.0 = Release|x64
 		{79E610B3-3F28-440A-8D45-6D793A5415B2}.Release|x86.ActiveCfg = Release|Win32
 		{79E610B3-3F28-440A-8D45-6D793A5415B2}.Release|x86.Build.0 = Release|Win32
+		{47886C3C-21C2-4C59-A9B2-83C94317BDCD}.Debug|x64.ActiveCfg = Debug|x64
+		{47886C3C-21C2-4C59-A9B2-83C94317BDCD}.Debug|x64.Build.0 = Debug|x64
+		{47886C3C-21C2-4C59-A9B2-83C94317BDCD}.Debug|x86.ActiveCfg = Debug|Win32
+		{47886C3C-21C2-4C59-A9B2-83C94317BDCD}.Debug|x86.Build.0 = Debug|Win32
+		{47886C3C-21C2-4C59-A9B2-83C94317BDCD}.Release|x64.ActiveCfg = Release|x64
+		{47886C3C-21C2-4C59-A9B2-83C94317BDCD}.Release|x64.Build.0 = Release|x64
+		{47886C3C-21C2-4C59-A9B2-83C94317BDCD}.Release|x86.ActiveCfg = Release|Win32
+		{47886C3C-21C2-4C59-A9B2-83C94317BDCD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +71,6 @@ Global
 		{BA277951-4759-461D-994A-8ED59BEC53C0} = {D84AA78D-758A-4681-9DA4-8941F7504731}
 		{CF99E31A-7899-492D-ACBE-5BA7118DDBCA} = {D84AA78D-758A-4681-9DA4-8941F7504731}
 		{79E610B3-3F28-440A-8D45-6D793A5415B2} = {D84AA78D-758A-4681-9DA4-8941F7504731}
+		{47886C3C-21C2-4C59-A9B2-83C94317BDCD} = {D84AA78D-758A-4681-9DA4-8941F7504731}
 	EndGlobalSection
 EndGlobal
