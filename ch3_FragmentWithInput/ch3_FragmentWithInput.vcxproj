@@ -19,14 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="UpdatingVertexAttribute.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="triangle.frag" />
     <None Include="triangle.vert" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FragmentWithInput.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FB0D1849-67D7-4E7C-B210-CB0AD79DA330}</ProjectGuid>
+    <ProjectGuid>{C91CFB4F-297A-4314-8F77-A64D0DB1EBFC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SimpleClear</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
