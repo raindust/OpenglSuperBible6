@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ch5", "ch5", "{0E2A459C-D21
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch5_InitializeBuffer", "ch5_InitializeBuffer\ch5_InitializeBuffer.vcxproj", "{A98D6A83-1649-41B1-87D3-81A0B69B78AB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch5_InitializeBuffer_SubData", "ch5_InitializeBuffer_SubData\ch5_InitializeBuffer_SubData.vcxproj", "{E3121AB1-45C4-4D35-9429-20E6AB023097}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -127,6 +129,14 @@ Global
 		{A98D6A83-1649-41B1-87D3-81A0B69B78AB}.Release|x64.Build.0 = Release|x64
 		{A98D6A83-1649-41B1-87D3-81A0B69B78AB}.Release|x86.ActiveCfg = Release|Win32
 		{A98D6A83-1649-41B1-87D3-81A0B69B78AB}.Release|x86.Build.0 = Release|Win32
+		{E3121AB1-45C4-4D35-9429-20E6AB023097}.Debug|x64.ActiveCfg = Debug|x64
+		{E3121AB1-45C4-4D35-9429-20E6AB023097}.Debug|x64.Build.0 = Debug|x64
+		{E3121AB1-45C4-4D35-9429-20E6AB023097}.Debug|x86.ActiveCfg = Debug|Win32
+		{E3121AB1-45C4-4D35-9429-20E6AB023097}.Debug|x86.Build.0 = Debug|Win32
+		{E3121AB1-45C4-4D35-9429-20E6AB023097}.Release|x64.ActiveCfg = Release|x64
+		{E3121AB1-45C4-4D35-9429-20E6AB023097}.Release|x64.Build.0 = Release|x64
+		{E3121AB1-45C4-4D35-9429-20E6AB023097}.Release|x86.ActiveCfg = Release|Win32
+		{E3121AB1-45C4-4D35-9429-20E6AB023097}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -142,6 +152,7 @@ Global
 		{48E91F65-4DF0-4776-B304-E41ACA8571C4} = {18081CB4-C4B6-45CF-B251-A881A53B77D5}
 		{1CA262A3-DFD3-4497-8F2A-34C9B4E2C01E} = {18081CB4-C4B6-45CF-B251-A881A53B77D5}
 		{A98D6A83-1649-41B1-87D3-81A0B69B78AB} = {0E2A459C-D21E-49FE-A5D5-307ADD63ED22}
+		{E3121AB1-45C4-4D35-9429-20E6AB023097} = {0E2A459C-D21E-49FE-A5D5-307ADD63ED22}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58478922-FBEA-4B67-BD2F-52C49485BB6E}
