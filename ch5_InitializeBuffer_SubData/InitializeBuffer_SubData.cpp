@@ -47,6 +47,7 @@ public:
 		glBufferData(GL_ARRAY_BUFFER, sizeof(data), NULL, GL_STATIC_DRAW);
 		glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(data), data);
 
+		glUseProgram(rendering_program);
 		glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
 		glEnableVertexAttribArray(0);
 	}

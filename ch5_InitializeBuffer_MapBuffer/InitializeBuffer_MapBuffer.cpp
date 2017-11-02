@@ -50,6 +50,7 @@ public:
 		memcpy(ptr, data, sizeof(data));
 		glUnmapBuffer(GL_ARRAY_BUFFER);
 
+		glUseProgram(rendering_program);
 		glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
 		glEnableVertexAttribArray(0);
 	}

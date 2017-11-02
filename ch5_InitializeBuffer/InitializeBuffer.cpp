@@ -46,7 +46,8 @@ public:
 		glBindBuffer(GL_ARRAY_BUFFER, buffer);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(data), data, GL_STATIC_DRAW);
 
-		glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
+		glUseProgram(rendering_program);
+		glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, NULL);
 		glEnableVertexAttribArray(0);
 	}
 
