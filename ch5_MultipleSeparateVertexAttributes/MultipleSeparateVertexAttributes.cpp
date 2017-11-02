@@ -32,35 +32,37 @@ public:
 	{
 		static const float positions[] =
 		{
-			0.25, -0.25, 0.5,
-			-0.25, -0.25, 0.5,
-			0.25, 0.25, 0.5
+			0.25, -0.25, 0.5, 1.0,
+			-0.25, -0.25, 0.5, 1.0,
+			0.25, 0.25, 0.5, 1.0
 		};
 
 		static const float colors[] =
 		{
-			1.0, 0.0, 0.0,
-			0.0, 1.0, 0.0,
-			0.0, 0.0, 1.0
+			1.0, 0.0, 0.0, 1.0,
+			0.0, 1.0, 0.0, 1.0,
+			0.0, 0.0, 1.0, 1.0
 		};
 
 		rendering_program = compile_shaders();
+
 		glGenVertexArrays(1, &vertex_array_object);
 		glBindVertexArray(vertex_array_object);
 
 		GLuint buffers[2];
 		glGenBuffers(2, buffers);
 
+
 		// Bind the first and initialize it
 		glBindBuffer(GL_ARRAY_BUFFER, buffers[0]);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(positions), positions, GL_STATIC_DRAW);
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
+		glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, NULL);
 		glEnableVertexAttribArray(0);
 
 		// Bind the second and initialize it
 		glBindBuffer(GL_ARRAY_BUFFER, buffers[1]);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
-		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, NULL);
+		glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 0, NULL);
 		glEnableVertexAttribArray(1);
 	}
 
@@ -77,7 +79,8 @@ public:
 		const GLfloat color[] = { 1.0f, 1.0f, 1.0f, 1.0f };
 		glClearBufferfv(GL_COLOR, 0, color);
 
-		//glBindVertexArray(vertex_array_object);
+		glUseProgram(rendering_program);
+		glBindVertexArray(vertex_array_object);
 
 		// Draw one triangle
 		glDrawArrays(GL_TRIANGLES, 0, 3);

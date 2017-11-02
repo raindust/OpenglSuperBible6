@@ -7,10 +7,12 @@ struct vertex
 	float x;
 	float y;
 	float z;
+	float w;
 	// Color
 	float r;
 	float g;
 	float b;
+	float a;
 };
 
 GLuint compile_shaders(void)
@@ -44,9 +46,9 @@ public:
 	{
 		static const float vertices[] =
 		{
-			0.25, -0.25, 0.5, 1.0, 0.0, 0.0,
-			-0.25, -0.25, 0.5, 0.0, 1.0, 0.0,
-			0.25, 0.25, 0.5, 0.0, 0.0, 1.0
+			0.25, -0.25, 0.5, 1.0, 1.0, 0.0, 0.0, 1.0,
+			-0.25, -0.25, 0.5, 1.0, 0.0, 1.0, 0.0, 1.0,
+			0.25, 0.25, 0.5, 1.0, 0.0, 0.0, 1.0, 1.0
 		};
 
 		rendering_program = compile_shaders();
@@ -58,12 +60,14 @@ public:
 		glBindBuffer(GL_ARRAY_BUFFER, buffer);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
+		glUseProgram(rendering_program);
+
 		// Set up two vertex attributes - first positions
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(vertex), (void*)offsetof(vertex, x));
+		glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(vertex), (void*)offsetof(vertex, x));
 		glEnableVertexAttribArray(0);
 
 		// Bind the second and initialize it
-		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(vertex), (void*)offsetof(vertex, r));
+		glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(vertex), (void*)offsetof(vertex, r));
 		glEnableVertexAttribArray(1);
 	}
 
