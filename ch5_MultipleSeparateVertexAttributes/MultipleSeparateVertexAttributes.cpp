@@ -32,16 +32,16 @@ public:
 	{
 		static const float positions[] =
 		{
-			0.25, -0.25, 0.5, 1.0,
-			-0.25, -0.25, 0.5, 1.0,
-			0.25, 0.25, 0.5, 1.0
+			0.25, -0.25, 0.5,
+			-0.25, -0.25, 0.5,
+			0.25, 0.25, 0.5
 		};
 
 		static const float colors[] =
 		{
-			1.0, 0.0, 0.0, 1.0,
-			0.0, 1.0, 0.0, 1.0,
-			0.0, 0.0, 1.0, 1.0
+			1.0, 0.0, 0.0, 
+			0.0, 1.0, 0.0, 
+			0.0, 0.0, 1.0
 		};
 
 		rendering_program = compile_shaders();
@@ -56,13 +56,13 @@ public:
 		// Bind the first and initialize it
 		glBindBuffer(GL_ARRAY_BUFFER, buffers[0]);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(positions), positions, GL_STATIC_DRAW);
-		glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, NULL);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
 		glEnableVertexAttribArray(0);
 
 		// Bind the second and initialize it
 		glBindBuffer(GL_ARRAY_BUFFER, buffers[1]);
 		glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
-		glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 0, NULL);
+		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, NULL);
 		glEnableVertexAttribArray(1);
 	}
 
