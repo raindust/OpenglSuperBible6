@@ -21,10 +21,6 @@
   <ItemGroup>
     <ClCompile Include="spinnycube.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="spinnycube.frag" />
-    <None Include="spinnycube.vert" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1F9F377E-6ABE-47FE-AEA5-5166CBA9FC12}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
